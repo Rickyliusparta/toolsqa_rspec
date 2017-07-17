@@ -33,8 +33,7 @@ describe 'testing toolsqa practice form' do
 
 	it 'should select profile pictures' do
 		@web.find_by_id('photo').click
-		@web.attach_file('KitKat.jpg', 'path/to/KitKat.jpg').click
-		# attach_file('photo', File.absolute_path('./Desktop/to/KitKat.jpg'))
+		@web.attach_file('photo', '/Users/Tech-A38/Desktop/KitKat.jpg')
 	end
 
 	it 'should input date' do
