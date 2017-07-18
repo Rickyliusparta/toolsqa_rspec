@@ -18,22 +18,25 @@ describe 'testing toolsqa practice form' do
 	end
 
 	it 'should input lastname' do
+		@web.find_field('lastname').value
 		@web.fill_in('lastname', :with => 'Liu')
 
 	end
 
 	it 'should select male' do
+		@web.find_field('sex').value
 		@web.find_by_id('sex-0').click
 	
 	end
 
-	it 'should select experinec years' do
+	it 'should select experinece years' do
 		@web.find_by_id('exp-2').click 
 	end
 
 	it 'should select profile pictures' do
-		@web.find_by_id('photo').click
+		# @web.find_by_id('photo').click
 		@web.attach_file('photo', '/Users/Tech-A38/Desktop/KitKat.jpg')
+		sleep 2
 	end
 
 	it 'should input date' do
